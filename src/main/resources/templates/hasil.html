@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>ID Card</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <style>
+            body{
+                width: 500px;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(0, -50%);
+                margin-left: -250px;
+                border: 2px solid black;
+            }
+            table{
+                width: 500px;
+                margin-bottom: 40px;
+            }
+            .left-div{
+                margin-left: 55px;
+                width: 250px;
+                display: inline-block;
+            }
+            .right-div{
+                margin-left: 30px;
+                display: inline-block;
+            }
+            img{
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <table style="fit-auto">
+            <tr>
+                <td>
+            <center><h1>ID Card</h1></center>
+            <hr/>
+                <br>
+                <div>
+                   <div class="left-div">
+                        <l th:text="${nim}"></l><br/><br/>
+                        <l th:text="${nama}"></l><br/><br/>
+                        <l th:text="${tanggal}"></l><br/><br/>
+                   </div>
+                    <div class="right-div">   
+                        <img th:src="${img}">
+                   </div>
+                </div>
+        </td>
+    </tr>
+</table>
+    </body>
+</html>
